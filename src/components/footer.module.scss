@@ -1,0 +1,18 @@
+@import "../styles/global.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  background-color: $background-color-secondary;
+  color: $font-color-secondary;
+  height: $footer-height;
+  width: 100vw;
+}
+
+.footerinfo {
+  align-self: center;
+  padding: 10px;
+  text-transform: lowercase;
+}

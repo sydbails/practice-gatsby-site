@@ -1,0 +1,10 @@
+@import "../styles/global";
+
+.header {
+  background-color: #3a4b5a;
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  width: 100vw;
+  padding: 0 20px;
+}

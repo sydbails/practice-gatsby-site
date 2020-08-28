@@ -1,0 +1,114 @@
+//globals
+$header-height: 75px;
+$footer-height: calc(#{$header-height} * 2);
+
+$shade-0: #fff;
+$shade-10: #394c5a;
+
+$font-color-main: $shade-10;
+$font-color-secondary: $shade-0;
+
+$background-color-main: $shade-0;
+$background-color-secondary: $shade-10;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.nav {
+  width: 100%;
+}
+
+.navlist {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navlistitem {
+  margin: 0 10px;
+}
+
+.navlistlink {
+  color: $font-color-secondary;
+  text-transform: lowercase;
+}
+
+.icon {
+  height: 26px;
+  width: 26px;
+  fill: $font-color-secondary;
+}
+
+.mainimage {
+  max-width: 300px;
+  opacity: 1;
+  transition: all 0.75s ease-in-out;
+  position: absolute;
+
+  &:hover {
+    opacity: 0;
+  }
+
+  @media (min-width: 672px) {
+    max-width: 400px;
+  }
+}
+
+.hiddenimage {
+  max-width: 300px;
+  align-self: center;
+  transition: all 0.75s ease-in-out;
+  position: relative;
+  z-index: -1;
+
+  @media (min-width: 672px) {
+    max-width: 400px;
+  }
+}
+
+.mainheader {
+  font: {
+    style: italic;
+    weight: 700;
+    size: 44px;
+  }
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.maindescription {
+  font-family: "IBM Plex Mono", monospace;
+  align-self: center;
+  margin-bottom: 24px;
+  text-align: center;
+
+  @media (min-width: 1056px) {
+    max-width: 700px;
+  }
+}
+
+.imagecontainer {
+  align-self: center;
+}

@@ -1,0 +1,19 @@
+@import "../styles/global.scss";
+
+.about {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1056px) {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+
+.aboutparagraph {
+  margin: 0 20px;
+
+  @media (min-width: 1056px) {
+    width: 600px;
+  }
+}
