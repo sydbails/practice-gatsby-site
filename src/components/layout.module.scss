@@ -5,11 +5,12 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: relative;
+  //   position: relative;
   margin: 0 16px;
   padding: 40px 0;
   max-width: 1289px;
-  height: 100vh;
+  height: fit-content;
+  min-height: calc(100vh - (#{$header-height} + #{$footer-height}));
 
   @media (min-width: 672px) {
     margin: 0 32px;
@@ -17,6 +18,5 @@
 
   @media (min-width: 1056px) {
     margin: 0 auto;
-    height: calc(100vh - (#{$header-height} + #{$footer-height}));
   }
 }

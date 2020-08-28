@@ -2,9 +2,9 @@
 
 .footer {
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
   background-color: $background-color-secondary;
   color: $font-color-secondary;
   height: $footer-height;

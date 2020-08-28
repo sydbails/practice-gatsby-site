@@ -5,14 +5,23 @@ $footer-height: calc(#{$header-height} * 2);
 $shade-0: #fff;
 $shade-10: #394c5a;
 
+$blue-10: #3e4f79;
+
 $font-color-main: $shade-10;
 $font-color-secondary: $shade-0;
+$font-color-tertiary: $blue-10;
 
 $background-color-main: $shade-0;
 $background-color-secondary: $shade-10;
 
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -88,6 +97,7 @@ p {
 }
 
 .mainheader {
+  color: $font-color-tertiary;
   font: {
     style: italic;
     weight: 700;
@@ -110,5 +120,6 @@ p {
 }
 
 .imagecontainer {
+  display: flex;
   align-self: center;
 }

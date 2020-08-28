@@ -12,13 +12,13 @@ export default () => (
           </Link>
         </li>
         <li className={styles.navlistitem}>
-          <Link className={styles.navlistlink} to="/blog">
-            Blog
+          <Link className={styles.navlistlink} to="/about">
+            About
           </Link>
         </li>
         <li className={styles.navlistitem}>
-          <Link className={styles.navlistlink} to="/about">
-            About Me
+          <Link className={styles.navlistlink} to="/blog">
+            Blog
           </Link>
         </li>
       </ul>
