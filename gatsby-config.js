@@ -3,6 +3,10 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const dotenv = require("dotenv")
+dotenv.config()
+
+const { githubApiQuery } = require("./src/components/github-api")
 
 module.exports = {
   /* Your site config here */
@@ -13,6 +17,17 @@ module.exports = {
       options: {
         rule: {
           include: /assets/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        url: "https://api.github.com/graphql",
+        token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
+        graphQLQuery: githubApiQuery,
+        variables: {
+          github_login: process.env.GITHUB_LOGIN,
         },
       },
     },

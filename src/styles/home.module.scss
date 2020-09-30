@@ -1,13 +1,37 @@
 @import "../styles/global.scss";
 
-.container {
+.container-three {
   margin: 40px 0;
   align-self: center;
   display: grid;
-  //   grid-gap: 20px;
   grid-template-columns: 1fr;
 
   @media (min-width: 672px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.title {
+  color: $shade-100;
+  font: {
+    weight: 700;
+    size: 44px;
+  }
+  letter-spacing: 5px;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.sub-title {
+  color: $shade-100;
+  font: {
+    weight: 700;
+    size: 44px;
+  }
+  width: 30ch;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 35%;
+  left: 15%;
 }

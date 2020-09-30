@@ -4,10 +4,11 @@ $footer-height: calc(#{$header-height} * 2);
 
 $shade-0: #fff;
 $shade-10: #394c5a;
+$shade-100: #000;
 
 $blue-10: #3e4f79;
 
-$font-color-main: $shade-10;
+$font-color-main: $shade-100;
 $font-color-secondary: $shade-0;
 $font-color-tertiary: $blue-10;
 
@@ -48,25 +49,33 @@ p {
 
 .navlist {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .navlistitem {
-  margin: 0 10px;
+  margin: 10px 0;
 }
 
 .navlistlink {
-  color: $font-color-secondary;
-  text-transform: lowercase;
+  color: $font-color-main;
+  text-transform: uppercase;
+}
+
+.navlistlink.navlisttext {
+  &:before {
+    content: "→";
+    margin-left: 5px;
+  }
 }
 
 .icon {
-  height: 26px;
-  width: 26px;
-  fill: $font-color-secondary;
+  height: 2rem;
+  width: 2rem;
+  fill: $shade-0;
 }
 
 .mainimage {
@@ -97,9 +106,8 @@ p {
 }
 
 .mainheader {
-  color: $font-color-tertiary;
+  color: $shade-100;
   font: {
-    style: italic;
     weight: 700;
     size: 44px;
   }
@@ -122,4 +130,15 @@ p {
 .imagecontainer {
   display: flex;
   align-self: center;
+}
+
+.container-three {
+  // margin: 40px 0;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 672px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
